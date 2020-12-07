@@ -1,3 +1,5 @@
+import { GET_RECIPES_SUCCESS } from './main.actions'
+
 const initialState = {
   recipes: []
 }
