@@ -2,7 +2,7 @@ import { call, put, takeLatest } from 'redux-saga/effects'
 
 import { API } from '../../core/api'
 
-import { getRecipesRequest, getRecipesSuccess, getRecipesError } from './main.actions'
+import { GET_RECIPES_REQUEST, getRecipesSuccess, getRecipesError } from './main.actions'
 
 function* getRecipes() {
   try {
@@ -15,5 +15,5 @@ function* getRecipes() {
 }
 
 export function* watchGetRecipes() {
-  yield takeLatest(getRecipesRequest(), getRecipes)
+  yield takeLatest(GET_RECIPES_REQUEST, getRecipes)
 }
